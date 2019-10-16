@@ -1,6 +1,8 @@
-﻿namespace MikeGrayCodes.BuildingBlocks.EventBus
+﻿using MediatR;
+
+namespace MikeGrayCodes.BuildingBlocks.EventBus
 {
-    public interface IDomainEvent
+    public interface IDomainEvent : IRequest
     {
     }
 }
