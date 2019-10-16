@@ -32,7 +32,7 @@ namespace MikeGrayCodes.BuildingBlocks.EventBus.Kafka
                 c.Subscribe(topic);
                 try
                 {
-                    while (cancellationToken.IsCancellationRequested)
+                    while (true)
                     {
                         try
                         {
