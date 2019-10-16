@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\MikeGrayCodes.BuildingBlocks.Domain\MikeGrayCodes.BuildingBlocks.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
