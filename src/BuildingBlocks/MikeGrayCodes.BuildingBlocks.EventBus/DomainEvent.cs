@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace MikeGrayCodes.BuildingBlocks.Domain.Events
+namespace MikeGrayCodes.BuildingBlocks.EventBus
 {
     public class DomainEvent : IDomainEvent
     {

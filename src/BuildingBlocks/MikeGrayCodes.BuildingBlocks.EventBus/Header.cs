@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MikeGrayCodes.BuildingBlocks.Domain.Events
+namespace MikeGrayCodes.BuildingBlocks.EventBus
 {
     public class Header
     {

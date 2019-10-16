@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="EventBus\" />
+    <ProjectReference Include="..\MikeGrayCodes.BuildingBlocks.EventBus\MikeGrayCodes.BuildingBlocks.EventBus.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Events\" />
   </ItemGroup>
 
 </Project>

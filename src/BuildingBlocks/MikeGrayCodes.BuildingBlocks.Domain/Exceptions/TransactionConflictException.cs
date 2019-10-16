@@ -1,5 +1,5 @@
 ﻿using MikeGrayCodes.BuildingBlocks.Domain.Entities;
-using MikeGrayCodes.BuildingBlocks.Domain.Events;
+using MikeGrayCodes.BuildingBlocks.EventBus;
 
 namespace MikeGrayCodes.BuildingBlocks.Domain.Exceptions
 {
