@@ -18,7 +18,7 @@ namespace MikeGrayCodes.Authentication.Domain.Entities.ApplicationUser.Rules
 
         public bool IsBroken()
         {
-            return currentName != newName
+            return currentName != newName;
         }
 
         public string Message => "ApplicationUser name must not be the same as previously";
