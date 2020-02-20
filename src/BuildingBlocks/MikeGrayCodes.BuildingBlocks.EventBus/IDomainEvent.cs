@@ -2,7 +2,7 @@
 
 namespace MikeGrayCodes.BuildingBlocks.EventBus
 {
-    public interface IDomainEvent : IRequest
+    public interface IDomainEvent : INotification
     {
     }
 }
