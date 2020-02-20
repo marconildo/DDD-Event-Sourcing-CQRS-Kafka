@@ -53,7 +53,7 @@ namespace MikeGrayCodes.BuildingBlocks.EventBus.Kafka
                             logger.LogInformation("----- Handling event: CorrelationId: {CorrelationId} AggregateRootId:{AggregateRoot} at {AppName} - ({@IntegrationEvent})", 
                                 domainEvent.Header.CorrelationId, domainEvent.AggregateRootId, AppName, domainEvent);
 
-                            await mediator.Send(domainEvent);
+                            await mediator.Publish(domainEvent);
 
                             logger.LogInformation("----- Handled event: CorrelationId: {CorrelationId} AggregateRootId:{AggregateRoot} at {AppName} - ({@IntegrationEvent})",
                                 domainEvent.Header.CorrelationId, domainEvent.AggregateRootId, AppName, domainEvent);
