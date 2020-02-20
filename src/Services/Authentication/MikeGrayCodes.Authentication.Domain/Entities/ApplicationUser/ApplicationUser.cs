@@ -1,5 +1,7 @@
 ﻿using MikeGrayCodes.Authentication.Domain.Entities.ApplicationUser.Events;
+using MikeGrayCodes.Authentication.Domain.Entities.ApplicationUser.Rules;
 using MikeGrayCodes.BuildingBlocks.Domain.Entities;
+using MikeGrayCodes.BuildingBlocks.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,14 +10,24 @@ namespace MikeGrayCodes.Authentication.Domain.Entities.ApplicationUser
 {
     public class ApplicationUser : AggregateRoot
     {
-        private ApplicationUser()
+        public string Email { get; private set; }
+        public string Name { get; private set; }
+
+        private ApplicationUser(string email, string name)
         {
             Register<ApplicationUserCreatedDomainEvent>(When);
         }
 
-        public static ApplicationUser Create()
+        public static ApplicationUser Create(string email, string name, IApplicationUserUniquenessChecker applicationUserUniquenessChecker)
         {
-            return new ApplicationUser();
+            return new ApplicationUser(email, name);
+        }
+
+        public void ChangeName(string name)
+        {
+            this.CheckRule(new ApplicationUserCannotChangeNameToSameRule(this.Name, name));
+
+            this.Name = name;
         }
 
         public void Start()
