@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Services\Authentication\MikeGrayCodes.Authentication.Infrastructure\MikeGrayCodes.Authentication.Infrastructure.csproj" />
+    <ProjectReference Include="..\MikeGrayCodes.BuildingBlocks.Infrastructure\MikeGrayCodes.BuildingBlocks.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

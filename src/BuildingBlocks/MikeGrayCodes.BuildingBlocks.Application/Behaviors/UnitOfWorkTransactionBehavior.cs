@@ -12,11 +12,13 @@ namespace MikeGrayCodes.BuildingBlocks.Application.Behaviors
     {
         private readonly ILogger<TRequest> logger;
         private readonly IUnitOfWork unitOfWork;
+        private readonly IInternalCommandRepository internalCommandRepository;
 
-        public UnitOfWorkTransactionBehavior(ILogger<TRequest> logger, IUnitOfWork unitOfWork)
+        public UnitOfWorkTransactionBehavior(ILogger<TRequest> logger, IUnitOfWork unitOfWork, IInternalCommandRepository internalCommandRepository)
         {
-            this.logger = logger;
+            this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
             this.unitOfWork = unitOfWork ?? throw new System.ArgumentNullException(nameof(unitOfWork));
+            this.internalCommandRepository = internalCommandRepository ?? throw new ArgumentNullException(nameof(internalCommandRepository));
         }
 
         public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
@@ -29,17 +31,14 @@ namespace MikeGrayCodes.BuildingBlocks.Application.Behaviors
 
             logger.LogInformation("Complete Transaction: {Name} {@Request}", name, request);
 
-            if (request is InternalCommandBase)
+            if (request is InternalCommand)
             {
-                throw new NotImplementedException();
-                //var internalCommand =
-                //    await dbContext.InternalCommands.FirstOrDefaultAsync(x => x.Id == command.Id,
-                //        cancellationToken: cancellationToken);
+                var internalCommand = await internalCommandRepository.GetFirstOrDefaultInternalCommand(request.Id, cancellationToken);
 
-                //if (internalCommand != null)
-                //{
-                //    internalCommand.ProcessedDate = DateTime.UtcNow;
-                //}
+                if (internalCommand != null)
+                {
+                    internalCommand.ProcessedDate = DateTime.UtcNow;
+                }
             }
 
             await unitOfWork.Complete(cancellationToken);

@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MikeGrayCodes.Authenticatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MikeGrayCodes.BuildingBlocks.Service", "BuildingBlocks\MikeGrayCodes.BuildingBlocks.Service\MikeGrayCodes.BuildingBlocks.Service.csproj", "{B4CC1ECF-847C-4AAA-87E1-917F04F4025A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MikeGrayCodes.BuildingBlocks.Persistence.EntityFramework", "BuildingBlocks\MikeGrayCodes.BuildingBlocks.Persistence.EntityFrameWork\MikeGrayCodes.BuildingBlocks.Persistence.EntityFramework.csproj", "{19678F84-B4FF-4E52-8BCE-ADF096AD0591}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{B4CC1ECF-847C-4AAA-87E1-917F04F4025A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4CC1ECF-847C-4AAA-87E1-917F04F4025A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4CC1ECF-847C-4AAA-87E1-917F04F4025A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19678F84-B4FF-4E52-8BCE-ADF096AD0591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19678F84-B4FF-4E52-8BCE-ADF096AD0591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19678F84-B4FF-4E52-8BCE-ADF096AD0591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19678F84-B4FF-4E52-8BCE-ADF096AD0591}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +83,7 @@ Global
 		{C0DDE38F-2525-4763-95C5-E8E458B926F0} = {C655DFDB-89D5-441B-BFCA-1E7710DA16DC}
 		{B1086B21-B5C9-4ADC-BCA8-31DC791E2CB4} = {C655DFDB-89D5-441B-BFCA-1E7710DA16DC}
 		{B4CC1ECF-847C-4AAA-87E1-917F04F4025A} = {1694AE12-D3DE-4A55-8874-0E12FA483F01}
+		{19678F84-B4FF-4E52-8BCE-ADF096AD0591} = {1694AE12-D3DE-4A55-8874-0E12FA483F01}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0169AF0F-8204-4BD8-8082-84B4BD76B4C6}

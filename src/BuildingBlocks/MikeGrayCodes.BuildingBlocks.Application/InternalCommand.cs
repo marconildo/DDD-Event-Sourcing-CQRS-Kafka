@@ -2,7 +2,7 @@
 
 namespace MikeGrayCodes.BuildingBlocks.Application
 {
-    public class InternalCommand
+    public class InternalCommand : ICommand
     {
         public Guid Id { get; set; }
 
