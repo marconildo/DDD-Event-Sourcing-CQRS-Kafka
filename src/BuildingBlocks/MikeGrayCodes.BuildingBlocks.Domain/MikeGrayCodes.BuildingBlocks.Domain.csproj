@@ -5,11 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MikeGrayCodes.BuildingBlocks.EventBus\MikeGrayCodes.BuildingBlocks.EventBus.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Events\" />
+    <PackageReference Include="MediatR" Version="8.0.0" />
   </ItemGroup>
 
 </Project>

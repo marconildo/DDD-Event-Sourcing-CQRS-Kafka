@@ -50,7 +50,7 @@ namespace MikeGrayCodes.BuildingBlocks.EventBus.Kafka
                             Type eventType = Type.GetType(cr.Key);
                             DomainEvent domainEvent = (DomainEvent)JsonConvert.DeserializeObject(cr.Value, eventType);
 
-                            logger.LogInformation("----- Handling event: CorrelationId: {CorrelationId} AggregateRootId:{AggregateRoot} at {AppName} - ({@IntegrationEvent})", 
+                            logger.LogInformation("----- Handling event: CorrelationId: {CorrelationId} AggregateRootId:{AggregateRoot} at {AppName} - ({@IntegrationEvent})",
                                 domainEvent.Header.CorrelationId, domainEvent.AggregateRootId, AppName, domainEvent);
 
                             await mediator.Publish(domainEvent);

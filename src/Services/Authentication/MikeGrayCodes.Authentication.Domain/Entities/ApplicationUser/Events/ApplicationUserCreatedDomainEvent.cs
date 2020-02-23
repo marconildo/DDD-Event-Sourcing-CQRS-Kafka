@@ -1,8 +1,6 @@
 ﻿using MikeGrayCodes.BuildingBlocks.Domain.Entities;
-using MikeGrayCodes.BuildingBlocks.EventBus;
+using MikeGrayCodes.BuildingBlocks.Domain.Events;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MikeGrayCodes.Authentication.Domain.Entities.ApplicationUser.Events
 {

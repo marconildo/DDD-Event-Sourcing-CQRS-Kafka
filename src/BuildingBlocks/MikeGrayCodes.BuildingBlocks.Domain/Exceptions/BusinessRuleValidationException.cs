@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MikeGrayCodes.BuildingBlocks.Domain.Exceptions
+﻿namespace MikeGrayCodes.BuildingBlocks.Domain.Exceptions
 {
     public class BusinessRuleValidationException : DomainException
     {

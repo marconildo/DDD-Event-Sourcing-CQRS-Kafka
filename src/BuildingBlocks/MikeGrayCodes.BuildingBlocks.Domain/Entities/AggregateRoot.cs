@@ -1,11 +1,11 @@
-﻿using MikeGrayCodes.BuildingBlocks.EventBus;
+﻿using MikeGrayCodes.BuildingBlocks.Domain.Events;
 using System;
 using System.Collections.Generic;
 
 namespace MikeGrayCodes.BuildingBlocks.Domain.Entities
 {
     public class AggregateRoot : Entity
-    { 
+    {
         private readonly Dictionary<Type, Action<object>> handlers = new Dictionary<Type, Action<object>>();
         private readonly List<DomainEvent> domainEvents = new List<DomainEvent>();
 

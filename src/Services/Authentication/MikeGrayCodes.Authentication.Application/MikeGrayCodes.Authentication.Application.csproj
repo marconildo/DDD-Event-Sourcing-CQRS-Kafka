@@ -8,4 +8,9 @@
     <PackageReference Include="IdentityServer4" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\MikeGrayCodes.BuildingBlocks.Application\MikeGrayCodes.BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="..\MikeGrayCodes.Authentication.Domain\MikeGrayCodes.Authentication.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

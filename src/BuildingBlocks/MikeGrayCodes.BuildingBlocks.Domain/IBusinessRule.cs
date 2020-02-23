@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MikeGrayCodes.BuildingBlocks.Domain
+﻿namespace MikeGrayCodes.BuildingBlocks.Domain
 {
     public interface IBusinessRule
     {

@@ -1,7 +1,5 @@
 ﻿using MikeGrayCodes.BuildingBlocks.Domain;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MikeGrayCodes.Authentication.Domain.Entities.ApplicationUser.Rules
 {

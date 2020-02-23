@@ -1,10 +1,6 @@
 ﻿using MikeGrayCodes.Authentication.Domain.Entities.ApplicationUser.Events;
 using MikeGrayCodes.Authentication.Domain.Entities.ApplicationUser.Rules;
 using MikeGrayCodes.BuildingBlocks.Domain.Entities;
-using MikeGrayCodes.BuildingBlocks.Domain.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MikeGrayCodes.Authentication.Domain.Entities.ApplicationUser
 {
