@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Services\Authentication\MikeGrayCodes.Authentication.Infrastructure\MikeGrayCodes.Authentication.Infrastructure.csproj" />
     <ProjectReference Include="..\MikeGrayCodes.BuildingBlocks.Infrastructure\MikeGrayCodes.BuildingBlocks.Infrastructure.csproj" />
   </ItemGroup>
 

@@ -1,23 +1,28 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MikeGrayCodes.BuildingBlocks.Domain.Entities;
 using MikeGrayCodes.BuildingBlocks.Domain.Events;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace MikeGrayCodes.BuildingBlocks.Infrastructure.DomainEventsDispatching
 {
-    public class DomainEventsAccessor : IDomainEventsAccessor
+    public class DomainEventsAccessor<T> : IDomainEventsAccessor
+        where T : DbContext
     {
-        private readonly DbContext _meetingsContext;
+        private readonly DbContext dbContext;
 
-        public DomainEventsAccessor(DbContext meetingsContext)
+        public DomainEventsAccessor(T dbContext)
         {
-            _meetingsContext = meetingsContext;
+            var hash = dbContext.GetHashCode();
+            Console.WriteLine(hash);
+
+            this.dbContext = dbContext;
         }
 
         public List<IDomainEvent> GetAllDomainEvents()
         {
-            var domainEntities = this._meetingsContext.ChangeTracker
+            var domainEntities = this.dbContext.ChangeTracker
                 .Entries<Entity>()
                 .Where(x => x.Entity.DomainEvents != null && x.Entity.DomainEvents.Any()).ToList();
 
@@ -28,7 +33,7 @@ namespace MikeGrayCodes.BuildingBlocks.Infrastructure.DomainEventsDispatching
 
         public void ClearAllDomainEvents()
         {
-            var domainEntities = this._meetingsContext.ChangeTracker
+            var domainEntities = this.dbContext.ChangeTracker
                 .Entries<Entity>()
                 .Where(x => x.Entity.DomainEvents != null && x.Entity.DomainEvents.Any()).ToList();
 
