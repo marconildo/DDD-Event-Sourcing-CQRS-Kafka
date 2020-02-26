@@ -35,6 +35,7 @@ namespace MikeGrayCodes.BuildingBlocks.Infrastructure.DomainEventsDispatching
 
         public async Task DispatchEventsAsync()
         {
+            
             var domainEvents = domainEventsProvider.GetAllDomainEvents();
 
 
@@ -73,7 +74,7 @@ namespace MikeGrayCodes.BuildingBlocks.Infrastructure.DomainEventsDispatching
                 });
                 OutboxMessage outboxMessage = new OutboxMessage(
                     domainEventNotification.Id,
-                    domainEventNotification.DomainEvent.CreatedDate,
+                    domainEventNotification.DomainEvent.OccurredOn,
                     type,
                     data);
                 outbox.Add(outboxMessage);

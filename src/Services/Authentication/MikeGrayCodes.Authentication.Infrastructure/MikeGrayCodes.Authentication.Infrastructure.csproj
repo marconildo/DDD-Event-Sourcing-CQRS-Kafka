@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\MikeGrayCodes.BuildingBlocks.Infrastructure\MikeGrayCodes.BuildingBlocks.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\MikeGrayCodes.BuildingBlocks.Persistence.EntityFrameWork\MikeGrayCodes.BuildingBlocks.Persistence.EntityFramework.csproj" />
+    <ProjectReference Include="..\MikeGrayCodes.Authentication.Domain\MikeGrayCodes.Authentication.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

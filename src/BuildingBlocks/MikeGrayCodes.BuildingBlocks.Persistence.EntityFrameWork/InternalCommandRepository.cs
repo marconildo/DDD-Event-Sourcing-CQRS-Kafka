@@ -1,21 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MikeGrayCodes.BuildingBlocks.Application;
 using MikeGrayCodes.BuildingBlocks.Application.Behaviors;
-using MikeGrayCodes.BuildingBlocks.Infrastructure.InternalCommands;
 using MikeGrayCodes.BuildingBlocks.Persistence.EntityFrameWork;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace MikeGrayCodes.BuildingBlocks.Persistence.EntityFramework
 {
-    public class InternalCommandRepository : IInternalCommandRepository
+    public class InternalCommandRepository<T> : IInternalCommandRepository
+        where T : DbContext
     {
-        private readonly BaseDbContext dbContext;
+        private readonly BaseDbContext<T> dbContext;
 
-        public InternalCommandRepository(BaseDbContext dbContext)
+        public InternalCommandRepository(BaseDbContext<T> dbContext)
         {
             this.dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }

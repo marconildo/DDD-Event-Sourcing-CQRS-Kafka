@@ -7,6 +7,7 @@
   <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0-preview1.19506.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0-preview1.19506.2">
       <PrivateAssets>all</PrivateAssets>
@@ -17,7 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\MikeGrayCodes.BuildingBlocks.Infrastructure\MikeGrayCodes.BuildingBlocks.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\MikeGrayCodes.BuildingBlocks.Persistence.EntityFrameWork\MikeGrayCodes.BuildingBlocks.Persistence.EntityFramework.csproj" />
     <ProjectReference Include="..\MikeGrayCodes.Authentication.Application\MikeGrayCodes.Authentication.Application.csproj" />
+    <ProjectReference Include="..\MikeGrayCodes.Authentication.Infrastructure\MikeGrayCodes.Authentication.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
